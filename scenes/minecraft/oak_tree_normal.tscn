@@ -1,0 +1,203 @@
+[gd_scene load_steps=3 format=3 uid="uid://hl62ojjxkk3p"]
+
+[ext_resource type="PackedScene" uid="uid://ceucmbptbmtb" path="res://scenes/minecraft/oak_log.tscn" id="1_fgfa0"]
+[ext_resource type="PackedScene" uid="uid://vnxe2hr5r47v" path="res://scenes/minecraft/oak_leaves.tscn" id="2_8haql"]
+
+[node name="OakTreeNormal" type="Node3D"]
+
+[node name="OakLog" parent="." instance=ExtResource("1_fgfa0")]
+
+[node name="OakLog2" parent="." instance=ExtResource("1_fgfa0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="OakLog3" parent="." instance=ExtResource("1_fgfa0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="OakLeaves" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 2)
+
+[node name="OakLeaves2" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99258, 2, 2.00658)
+
+[node name="OakLeaves3" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1)
+
+[node name="OakLeaves4" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 1)
+
+[node name="OakLeaves5" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+
+[node name="OakLeaves6" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0)
+
+[node name="OakLeaves7" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -1)
+
+[node name="OakLeaves8" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -1)
+
+[node name="OakLeaves9" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -2)
+
+[node name="OakLeaves10" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -2)
+
+[node name="OakLeaves11" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+
+[node name="OakLeaves12" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1)
+
+[node name="OakLeaves13" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -2)
+
+[node name="OakLeaves14" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
+
+[node name="OakLeaves15" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -2)
+
+[node name="OakLeaves16" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -1)
+
+[node name="OakLeaves17" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 2.00666, 0.000956059)
+
+[node name="OakLeaves18" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 2.00666, 1.00096)
+
+[node name="OakLeaves19" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99075, 2.00666, 0.000956059)
+
+[node name="OakLeaves20" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99075, 2.00666, 1.00096)
+
+[node name="OakLeaves21" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 2.00666, 2.00096)
+
+[node name="OakLeaves22" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99075, 2.00666, 2.00096)
+
+[node name="OakLeaves23" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 2.00666, 2.00096)
+
+[node name="OakLeaves24" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 2.00666, 1.00096)
+
+[node name="OakLog4" parent="." instance=ExtResource("1_fgfa0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="OakLeaves25" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 2)
+
+[node name="OakLeaves26" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99258, 3, 2.00658)
+
+[node name="OakLeaves27" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 1)
+
+[node name="OakLeaves28" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 1)
+
+[node name="OakLeaves29" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 0)
+
+[node name="OakLeaves30" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 0)
+
+[node name="OakLeaves31" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1)
+
+[node name="OakLeaves32" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -1)
+
+[node name="OakLeaves33" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -2)
+
+[node name="OakLeaves34" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -2)
+
+[node name="OakLeaves35" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -2)
+
+[node name="OakLeaves36" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
+
+[node name="OakLeaves37" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -2)
+
+[node name="OakLeaves38" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1)
+
+[node name="OakLeaves39" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -2)
+
+[node name="OakLeaves40" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -1)
+
+[node name="OakLeaves41" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 3.00666, 0.000956059)
+
+[node name="OakLeaves49" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 4.00666, 0.000956059)
+
+[node name="OakLeaves57" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 5.00666, 0.000956059)
+
+[node name="OakLeaves50" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 4.00666, 1.00096)
+
+[node name="OakLeaves51" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 4.00666, 1.00096)
+
+[node name="OakLeaves58" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 5.00666, 1.00096)
+
+[node name="OakLeaves52" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00925, 4.00666, 1.00096)
+
+[node name="OakLeaves53" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00925, 4.00666, 0.000956059)
+
+[node name="OakLeaves59" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00925, 5.00666, 0.000956059)
+
+[node name="OakLeaves54" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00925, 4.00666, -0.999044)
+
+[node name="OakLeaves55" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 4.00666, -0.999044)
+
+[node name="OakLeaves60" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 5.00666, -0.999044)
+
+[node name="OakLeaves61" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 5.00666, 0.000956059)
+
+[node name="OakLeaves56" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 4.00666, -0.999044)
+
+[node name="OakLeaves42" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 3.00666, 1.00096)
+
+[node name="OakLeaves43" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99075, 3.00666, 0.000956059)
+
+[node name="OakLeaves44" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99075, 3.00666, 1.00096)
+
+[node name="OakLeaves45" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990746, 3.00666, 2.00096)
+
+[node name="OakLeaves46" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99075, 3.00666, 2.00096)
+
+[node name="OakLeaves47" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 3.00666, 2.00096)
+
+[node name="OakLeaves48" parent="." instance=ExtResource("2_8haql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00925446, 3.00666, 1.00096)
+
+[node name="OakLog5" parent="." instance=ExtResource("1_fgfa0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)

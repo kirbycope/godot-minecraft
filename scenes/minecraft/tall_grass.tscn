@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://2p64j7du435n"]
+
+[ext_resource type="Texture2D" uid="uid://pg120jl05uc" path="res://assets/minecraft/textures/block/double_plant_grass_carried.png" id="1_euy2a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r67ni"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_euy2a")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_54e1e"]
+material = SubResource("StandardMaterial3D_r67ni")
+size = Vector2(1, 1)
+orientation = 2
+
+[node name="TallGrass" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
+mesh = SubResource("PlaneMesh_54e1e")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+mesh = SubResource("PlaneMesh_54e1e")

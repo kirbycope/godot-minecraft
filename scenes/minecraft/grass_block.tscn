@@ -6,62 +6,62 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hb3mk"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqqgf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3ecx"]
 cull_mode = 2
 albedo_texture = ExtResource("1_qqlnd")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ch8up"]
-material = SubResource("StandardMaterial3D_gqqgf")
+material = SubResource("StandardMaterial3D_v3ecx")
 size = Vector2(1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ir2gb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mo4f3"]
 cull_mode = 2
 albedo_texture = ExtResource("2_4iknl")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m0007"]
-material = SubResource("StandardMaterial3D_ir2gb")
+material = SubResource("StandardMaterial3D_mo4f3")
 size = Vector2(1, 1)
 orientation = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okvyg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i24af"]
 cull_mode = 2
 albedo_texture = ExtResource("2_4iknl")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_y3fa2"]
-material = SubResource("StandardMaterial3D_okvyg")
+material = SubResource("StandardMaterial3D_i24af")
 size = Vector2(1, 1)
 orientation = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u850o"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3x7b"]
 cull_mode = 2
 albedo_texture = ExtResource("2_4iknl")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ld1wm"]
-material = SubResource("StandardMaterial3D_u850o")
+material = SubResource("StandardMaterial3D_d3x7b")
 size = Vector2(1, 1)
 orientation = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5asnk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akxgj"]
 cull_mode = 2
 albedo_texture = ExtResource("2_4iknl")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_t1xof"]
-material = SubResource("StandardMaterial3D_5asnk")
+material = SubResource("StandardMaterial3D_akxgj")
 size = Vector2(1, 1)
 orientation = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjkj2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8fmg"]
 cull_mode = 2
 albedo_texture = ExtResource("3_wfkog")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_05x67"]
-material = SubResource("StandardMaterial3D_kjkj2")
+material = SubResource("StandardMaterial3D_r8fmg")
 size = Vector2(1, 1)
 
 [node name="GrassBlock" type="StaticBody3D"]

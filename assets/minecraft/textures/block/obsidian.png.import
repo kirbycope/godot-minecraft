@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb77cfpsq6x68"
-path.s3tc="res://.godot/imported/door_wood_lower.png-7e80a4e6a8112f95e8199aff8fadb96a.s3tc.ctex"
+uid="uid://svg82coekyys"
+path.s3tc="res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/minecraft/textures/block/door_wood_lower.png"
-dest_files=["res://.godot/imported/door_wood_lower.png-7e80a4e6a8112f95e8199aff8fadb96a.s3tc.ctex"]
+source_file="res://assets/minecraft/textures/block/obsidian.png"
+dest_files=["res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=3 uid="uid://ctemy511qua7"]
+
+[ext_resource type="Texture2D" uid="uid://svg82coekyys" path="res://assets/minecraft/textures/block/obsidian.png" id="1_20vcb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q7vix"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqqgf"]
+cull_mode = 2
+albedo_texture = ExtResource("1_20vcb")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_df54x"]
+material = SubResource("StandardMaterial3D_gqqgf")
+size = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ir2gb"]
+cull_mode = 2
+albedo_texture = ExtResource("1_20vcb")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jpcqn"]
+material = SubResource("StandardMaterial3D_ir2gb")
+size = Vector2(1, 1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okvyg"]
+cull_mode = 2
+albedo_texture = ExtResource("1_20vcb")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fr3jl"]
+material = SubResource("StandardMaterial3D_okvyg")
+size = Vector2(1, 1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u850o"]
+cull_mode = 2
+albedo_texture = ExtResource("1_20vcb")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ect81"]
+material = SubResource("StandardMaterial3D_u850o")
+size = Vector2(1, 1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5asnk"]
+cull_mode = 2
+albedo_texture = ExtResource("1_20vcb")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fhgk6"]
+material = SubResource("StandardMaterial3D_5asnk")
+size = Vector2(1, 1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjkj2"]
+cull_mode = 2
+albedo_texture = ExtResource("1_20vcb")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w5bxk"]
+material = SubResource("StandardMaterial3D_kjkj2")
+size = Vector2(1, 1)
+
+[node name="Obsidian" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_q7vix")
+
+[node name="Top" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("PlaneMesh_df54x")
+
+[node name="North" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+mesh = SubResource("PlaneMesh_jpcqn")
+
+[node name="East" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0, 0)
+mesh = SubResource("PlaneMesh_fr3jl")
+
+[node name="South" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+mesh = SubResource("PlaneMesh_ect81")
+skeleton = NodePath("../North")
+
+[node name="West" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0, 0)
+mesh = SubResource("PlaneMesh_fhgk6")
+
+[node name="Bottom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("PlaneMesh_w5bxk")

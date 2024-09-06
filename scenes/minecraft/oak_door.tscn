@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxvton5yuiygl"]
+
+[ext_resource type="Texture2D" uid="uid://dnmj5jgbfnsl" path="res://assets/minecraft/textures/block/door_wood_upper.png" id="1_y5pbn"]
+[ext_resource type="Texture2D" uid="uid://cb77cfpsq6x68" path="res://assets/minecraft/textures/block/door_wood_lower.png" id="2_q6bal"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wmjdq"]
+size = Vector3(1, 2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6xpd"]
+transparency = 1
+albedo_texture = ExtResource("1_y5pbn")
+uv1_offset = Vector3(0.5, 0.5, 0)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_bbg5j"]
+material = SubResource("StandardMaterial3D_y6xpd")
+size = Vector3(1, 1, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48ub"]
+albedo_texture = ExtResource("2_q6bal")
+uv1_offset = Vector3(0.5, 0.5, 0)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_w1he7"]
+material = SubResource("StandardMaterial3D_h48ub")
+size = Vector3(1, 1, 0.2)
+
+[node name="OakDoor" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_wmjdq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_bbg5j")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_w1he7")

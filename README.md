@@ -17,4 +17,4 @@ This game can be exported as a `.pck` and loaded into another Godot game client.
 1. Open the root folder using [VS Code](https://code.visualstudio.com/)
     - If you use GitHub Desktop, select the "Open in Visual Studio" button
 1. Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
-1. Run the following command, `. '.\ci\export-pack.ps1'`
+1. Run the following command, `. ".\ci\export-pack.ps1"`

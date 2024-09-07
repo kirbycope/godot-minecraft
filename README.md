@@ -4,7 +4,7 @@
 Minecraft: Godot Edition (MCGE).
 
 ## Game Pack
-This game can be exported as a `.pck` and loaded into another Godot game client. Download the [pack](ci\godot-minecraft.pck).
+This game can be [exported](https://docs.godotengine.org/en/stable/tutorials/export/exporting_pcks.html#generating-pck-files) as a `.pck` and [imported](https://docs.godotengine.org/en/stable/tutorials/export/exporting_pcks.html#opening-pck-files-at-runtime) into another Godot game client. Download the [pack](ci\godot-minecraft.pck).
 
 ## Export Game as Pack
 1. Select "Project" > "Export.."

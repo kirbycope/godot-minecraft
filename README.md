@@ -1,3 +1,5 @@
+![Thumbnail](/ci/thumbnail.png)
+
 # godot-minecraft
 Minecraft: Godot Edition (MCGE).
 

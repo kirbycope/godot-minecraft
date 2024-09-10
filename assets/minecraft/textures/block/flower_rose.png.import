@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba4dvkhwqf8pl"
 path.s3tc="res://.godot/imported/flower_rose.png-866610c5c3746dd17c5c62bb972dbac7.s3tc.ctex"
+path.etc2="res://.godot/imported/flower_rose.png-866610c5c3746dd17c5c62bb972dbac7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/flower_rose.png"
-dest_files=["res://.godot/imported/flower_rose.png-866610c5c3746dd17c5c62bb972dbac7.s3tc.ctex"]
+dest_files=["res://.godot/imported/flower_rose.png-866610c5c3746dd17c5c62bb972dbac7.s3tc.ctex", "res://.godot/imported/flower_rose.png-866610c5c3746dd17c5c62bb972dbac7.etc2.ctex"]
 
 [params]
 

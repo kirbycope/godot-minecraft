@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlo6k8v38i4re"
 path.s3tc="res://.godot/imported/dirt.png-103273c35df1414038959c233874a9cd.s3tc.ctex"
+path.etc2="res://.godot/imported/dirt.png-103273c35df1414038959c233874a9cd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/dirt.png"
-dest_files=["res://.godot/imported/dirt.png-103273c35df1414038959c233874a9cd.s3tc.ctex"]
+dest_files=["res://.godot/imported/dirt.png-103273c35df1414038959c233874a9cd.s3tc.ctex", "res://.godot/imported/dirt.png-103273c35df1414038959c233874a9cd.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://3hp5wn8dmp0x"
 path.s3tc="res://.godot/imported/flower_dandelion.png-afcafca6a3644a9ef60a1363daf3b368.s3tc.ctex"
+path.etc2="res://.godot/imported/flower_dandelion.png-afcafca6a3644a9ef60a1363daf3b368.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/flower_dandelion.png"
-dest_files=["res://.godot/imported/flower_dandelion.png-afcafca6a3644a9ef60a1363daf3b368.s3tc.ctex"]
+dest_files=["res://.godot/imported/flower_dandelion.png-afcafca6a3644a9ef60a1363daf3b368.s3tc.ctex", "res://.godot/imported/flower_dandelion.png-afcafca6a3644a9ef60a1363daf3b368.etc2.ctex"]
 
 [params]
 

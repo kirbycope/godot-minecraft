@@ -1,25 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt3dfymqtwwol"]
+[gd_scene load_steps=5 format=3 uid="uid://bqodqr4651lw0"]
 
-[ext_resource type="Texture2D" uid="uid://bs0y2vu2klat0" path="res://assets/minecraft/textures/block/trapdoor.png" id="1_ytyu4"]
+[ext_resource type="Texture2D" uid="uid://cx77ornk12h56" path="res://assets/minecraft/textures/block/trapdoor.png" id="1_yfw6b"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kpeik"]
-size = Vector3(1, 1, 0.2)
+[sub_resource type="BoxShape3D" id="BoxShape3D_7cbpf"]
+size = Vector3(1, 0.2, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u151a"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyna2"]
 transparency = 1
-albedo_texture = ExtResource("1_ytyu4")
-uv1_offset = Vector3(0.5, 0.5, 0)
+albedo_texture = ExtResource("1_yfw6b")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="BoxMesh" id="BoxMesh_w14ui"]
-material = SubResource("StandardMaterial3D_u151a")
-size = Vector3(1, 1, 0.2)
+[sub_resource type="BoxMesh" id="BoxMesh_p25ic"]
+material = SubResource("StandardMaterial3D_yyna2")
+size = Vector3(1, 0.2, 1)
 
 [node name="OakTrapdoor" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_kpeik")
+shape = SubResource("BoxShape3D_7cbpf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_w14ui")
+mesh = SubResource("BoxMesh_p25ic")

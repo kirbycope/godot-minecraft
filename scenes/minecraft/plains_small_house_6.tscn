@@ -1,455 +1,448 @@
-[gd_scene load_steps=11 format=3 uid="uid://byvd40oilrtac"]
+[gd_scene load_steps=11 format=3 uid="uid://bttq5d7qxdnen"]
 
-[ext_resource type="PackedScene" uid="uid://bph8gr3ubeaq4" path="res://scenes/minecraft/cobblestone.tscn" id="1_h5p0k"]
-[ext_resource type="PackedScene" uid="uid://ceucmbptbmtb" path="res://scenes/minecraft/oak_log.tscn" id="2_41852"]
-[ext_resource type="PackedScene" uid="uid://b50ssxmxgu2k4" path="res://scenes/minecraft/cobblestone_stairs.tscn" id="3_tmihj"]
-[ext_resource type="PackedScene" uid="uid://c2t87ckf5fbeo" path="res://scenes/minecraft/grass_block.tscn" id="4_xj7i0"]
-[ext_resource type="PackedScene" uid="uid://dt3dfymqtwwol" path="res://scenes/minecraft/oak_trapdoor.tscn" id="5_y5jmi"]
-[ext_resource type="PackedScene" uid="uid://bnplyum42svv0" path="res://scenes/minecraft/oak_planks.tscn" id="6_inyof"]
-[ext_resource type="PackedScene" uid="uid://dxvton5yuiygl" path="res://scenes/minecraft/oak_door.tscn" id="7_dm2c1"]
-[ext_resource type="PackedScene" uid="uid://088nd6bggw06" path="res://scenes/minecraft/poppy.tscn" id="7_p1dme"]
-[ext_resource type="PackedScene" uid="uid://4uwjmxiuukrj" path="res://scenes/minecraft/glass.tscn" id="8_uwiju"]
-[ext_resource type="PackedScene" uid="uid://bf8vktsssmlpt" path="res://scenes/minecraft/oak_stairs.tscn" id="9_ij2pt"]
+[ext_resource type="PackedScene" uid="uid://njjebksktmdj" path="res://scenes/minecraft/oak_log.tscn" id="1_mv175"]
+[ext_resource type="PackedScene" uid="uid://ddpmvnswfb134" path="res://scenes/minecraft/cobblestone.tscn" id="2_sew23"]
+[ext_resource type="PackedScene" uid="uid://bqodqr4651lw0" path="res://scenes/minecraft/oak_trapdoor.tscn" id="3_jey3a"]
+[ext_resource type="PackedScene" uid="uid://dgvwmp4c83amp" path="res://scenes/minecraft/grass_block.tscn" id="4_fgbti"]
+[ext_resource type="PackedScene" uid="uid://lohdu06fnmn2" path="res://scenes/minecraft/cobblestone_stairs.tscn" id="5_eq2ge"]
+[ext_resource type="PackedScene" uid="uid://dtlh28uiy0emx" path="res://scenes/minecraft/oak_planks.tscn" id="6_fxhf3"]
+[ext_resource type="PackedScene" uid="uid://mw2ds5aplo8r" path="res://scenes/minecraft/oak_door.tscn" id="7_o213t"]
+[ext_resource type="PackedScene" uid="uid://dt836skl61yl4" path="res://scenes/minecraft/poppy.tscn" id="7_x4lm6"]
+[ext_resource type="PackedScene" uid="uid://b78k4gblvybhh" path="res://scenes/minecraft/glass.tscn" id="8_xu0tg"]
+[ext_resource type="PackedScene" uid="uid://dba4wyb65yex4" path="res://scenes/minecraft/oak_stairs.tscn" id="9_a1q5l"]
 
 [node name="PlainsSmallHouse6" type="Node3D"]
 
 [node name="Layer1" type="Node3D" parent="."]
 
-[node name="Cobblestone" parent="Layer1" instance=ExtResource("1_h5p0k")]
+[node name="OakLog" parent="Layer1" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.5)
 
-[node name="Cobblestone2" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+[node name="Cobblestone" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.5)
 
-[node name="Cobblestone3" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+[node name="Cobblestone2" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 
-[node name="Cobblestone4" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+[node name="Cobblestone3" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1.5)
 
-[node name="Cobblestone5" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+[node name="OakLog2" parent="Layer1" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1.5)
 
-[node name="Cobblestone6" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+[node name="Cobblestone4" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.5)
 
-[node name="Cobblestone7" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+[node name="Cobblestone5" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.5)
 
-[node name="Cobblestone8" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+[node name="Cobblestone6" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 
-[node name="Cobblestone13" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+[node name="Cobblestone7" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.5)
 
-[node name="Cobblestone14" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+[node name="Cobblestone8" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.5)
 
-[node name="Cobblestone15" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+[node name="Cobblestone9" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0.5)
 
-[node name="Cobblestone16" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+[node name="Cobblestone10" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0.5)
 
-[node name="Cobblestone9" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+[node name="Cobblestone11" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 
-[node name="Cobblestone10" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="Cobblestone12" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
 
-[node name="Cobblestone11" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+[node name="Cobblestone13" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0.5)
 
-[node name="Cobblestone12" parent="Layer1" instance=ExtResource("1_h5p0k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+[node name="OakLog3" parent="Layer1" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1.5)
 
-[node name="OakLog" parent="Layer1" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+[node name="Cobblestone14" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.5)
 
-[node name="OakLog2" parent="Layer1" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+[node name="Cobblestone15" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 
-[node name="OakLog3" parent="Layer1" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+[node name="Cobblestone16" parent="Layer1" instance=ExtResource("2_sew23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
 
-[node name="OakLog4" parent="Layer1" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+[node name="OakLog4" parent="Layer1" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.5)
 
-[node name="OakLog5" parent="Layer1" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+[node name="OakTrapdoor" parent="Layer1" instance=ExtResource("3_jey3a")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -1.6, 0, 2.5)
 
-[node name="OakStairs" parent="Layer1" instance=ExtResource("3_tmihj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 2)
+[node name="GrassBlock" parent="Layer1" instance=ExtResource("4_fgbti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
 
-[node name="GrassBlock" parent="Layer1" instance=ExtResource("4_xj7i0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+[node name="CobblestoneStairs" parent="Layer1" instance=ExtResource("5_eq2ge")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 2.5)
 
-[node name="GrassBlock2" parent="Layer1" instance=ExtResource("4_xj7i0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+[node name="GrassBlock2" parent="Layer1" instance=ExtResource("4_fgbti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2.5)
 
-[node name="OakTrapdoor" parent="Layer1" instance=ExtResource("5_y5jmi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.6)
+[node name="OakTrapdoor2" parent="Layer1" instance=ExtResource("3_jey3a")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1.6, 0, 2.5)
 
-[node name="OakTrapdoor2" parent="Layer1" instance=ExtResource("5_y5jmi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2.6)
+[node name="OakTrapdoor3" parent="Layer1" instance=ExtResource("3_jey3a")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1, 0, 3.1)
 
-[node name="OakTrapdoor3" parent="Layer1" instance=ExtResource("5_y5jmi")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.6, 0, 2)
-
-[node name="OakTrapdoor4" parent="Layer1" instance=ExtResource("5_y5jmi")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6, 0, 2)
+[node name="OakTrapdoor4" parent="Layer1" instance=ExtResource("3_jey3a")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1, 0, 3.1)
 
 [node name="Layer2" type="Node3D" parent="."]
 
-[node name="OakLog" parent="Layer2" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 1)
+[node name="OakLog" parent="Layer2" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1.5)
 
-[node name="OakLog2" parent="Layer2" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2)
+[node name="OakPlanks" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -1.5)
 
-[node name="OakLog3" parent="Layer2" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
+[node name="OakPlanks2" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.5)
 
-[node name="OakLog4" parent="Layer2" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1)
+[node name="OakPlanks3" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1.5)
 
-[node name="OakPlanks" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1)
+[node name="OakLog2" parent="Layer2" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1.5)
 
-[node name="OakDoor" parent="Layer2" instance=ExtResource("7_dm2c1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1)
+[node name="OakPlanks4" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -0.5)
 
-[node name="OakPlanks2" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1)
+[node name="OakPlanks5" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -0.5)
 
-[node name="OakPlanks3" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+[node name="OakPlanks6" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0.5)
 
-[node name="OakPlanks4" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+[node name="OakPlanks7" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0.5)
 
-[node name="OakPlanks5" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -2)
+[node name="OakLog3" parent="Layer2" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 1.5)
 
-[node name="OakPlanks6" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+[node name="OakPlanks8" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1.5)
 
-[node name="OakPlanks7" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -2)
+[node name="OakDoor" parent="Layer2" instance=ExtResource("7_o213t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.9)
 
-[node name="OakPlanks8" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
+[node name="OakPlanks9" parent="Layer2" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1.5)
 
-[node name="OakPlanks9" parent="Layer2" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+[node name="OakLog4" parent="Layer2" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1.5)
 
-[node name="Poppy" parent="Layer2" instance=ExtResource("7_p1dme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 2)
+[node name="Poppy" parent="Layer2" instance=ExtResource("7_x4lm6")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1, 0.8, 2.5)
 
-[node name="Poppy2" parent="Layer2" instance=ExtResource("7_p1dme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2)
+[node name="Poppy2" parent="Layer2" instance=ExtResource("7_x4lm6")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 1, 0.8, 2.5)
 
 [node name="Layer3" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="OakLog" parent="Layer3" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 1)
+[node name="OakLog" parent="Layer3" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -1.5)
 
-[node name="OakLog2" parent="Layer3" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2)
+[node name="OakPlanks" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -1.5)
 
-[node name="OakLog3" parent="Layer3" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
+[node name="Glass" parent="Layer3" instance=ExtResource("8_xu0tg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1.5)
 
-[node name="OakLog4" parent="Layer3" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1)
+[node name="OakPlanks2" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1.5)
 
-[node name="OakPlanks" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1)
+[node name="OakLog2" parent="Layer3" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -1.5)
 
-[node name="OakPlanks2" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1)
+[node name="OakPlanks3" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -0.5)
 
-[node name="OakPlanks3" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+[node name="OakPlanks4" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -0.5)
 
-[node name="OakPlanks4" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+[node name="OakPlanks5" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0.5)
 
-[node name="OakPlanks5" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -2)
+[node name="OakPlanks6" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0.5)
 
-[node name="Glass" parent="Layer3" instance=ExtResource("8_uwiju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+[node name="OakLog3" parent="Layer3" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 1.5)
 
-[node name="OakPlanks7" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -2)
+[node name="OakPlanks7" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.5)
 
-[node name="OakPlanks8" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
+[node name="OakPlanks8" parent="Layer3" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 1.5)
 
-[node name="OakPlanks9" parent="Layer3" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+[node name="OakLog4" parent="Layer3" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 1.5)
 
 [node name="Layer4" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="OakLog" parent="Layer4" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 1)
+[node name="OakLog" parent="Layer4" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -1.5)
 
-[node name="OakLog2" parent="Layer4" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2)
+[node name="OakPlanks" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1.5)
 
-[node name="OakLog3" parent="Layer4" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
+[node name="OakPlanks2" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1.5)
 
-[node name="OakLog4" parent="Layer4" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1)
+[node name="OakPlanks3" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1.5)
 
-[node name="OakPlanks" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1)
+[node name="OakLog2" parent="Layer4" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -1.5)
 
-[node name="OakPlanks10" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+[node name="OakPlanks4" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -0.5)
 
-[node name="OakPlanks2" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1)
+[node name="OakPlanks5" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -0.5)
 
-[node name="OakPlanks3" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+[node name="OakPlanks6" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 0.5)
 
-[node name="OakPlanks4" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+[node name="OakPlanks7" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 0.5)
 
-[node name="OakPlanks5" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -2)
+[node name="OakLog3" parent="Layer4" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 1.5)
 
-[node name="OakPlanks6" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+[node name="OakPlanks8" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 1.5)
 
-[node name="OakPlanks7" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -2)
+[node name="OakPlanks9" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1.5)
 
-[node name="OakPlanks8" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1)
+[node name="OakPlanks10" parent="Layer4" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 1.5)
 
-[node name="OakPlanks9" parent="Layer4" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+[node name="OakLog4" parent="Layer4" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 1.5)
 
 [node name="Layer5" type="Node3D" parent="."]
 
-[node name="OakLog" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 1)
+[node name="OakStairs" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 4, -2.5)
 
-[node name="OakLog2" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 1)
+[node name="OakStairs2" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, -2, 4, -2.5)
 
-[node name="OakLog3" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -2)
+[node name="OakStairs3" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, -8.74228e-08, -1, -3.82137e-15, 1, -8.74228e-08, 4.37114e-08, 2, 4, -2.5)
 
-[node name="OakLog4" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -2)
+[node name="OakStairs4" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, 4, -2.5)
 
-[node name="OakLog5" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 4, -1)
+[node name="OakStairs5" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 4, -1.5)
 
-[node name="OakLog6" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 4, 0)
+[node name="OakLog" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -1.5)
 
-[node name="OakLog7" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 4, 0)
+[node name="OakLog2" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -1, 4, -1.5)
 
-[node name="OakLog8" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 4, -1)
+[node name="OakLog3" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 4, -1.5)
 
-[node name="OakLog9" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 1, 4, -2)
+[node name="OakLog4" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1, 4, -1.5)
 
-[node name="OakLog10" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 4, -2)
+[node name="OakLog5" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -1.5)
 
-[node name="OakLog11" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -1, 4, -2)
+[node name="OakStairs6" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 4, -1.5)
 
-[node name="OakLog12" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 1, 4, 1)
+[node name="OakStairs7" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 4, -0.5)
 
-[node name="OakLog13" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 4, 1)
+[node name="OakStairs8" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, 4, -0.5)
 
-[node name="OakLog14" parent="Layer5" instance=ExtResource("2_41852")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -1, 4, 1)
+[node name="OakLog6" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 4, -0.5)
 
-[node name="OakStairs7" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 2, 4.25, 2)
+[node name="OakLog8" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2, 4, 0.5)
 
-[node name="OakStairs" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3.75, 2)
+[node name="OakLog9" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 4, 0.5)
 
-[node name="OakStairs8" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, 2, 4.25, -3)
+[node name="OakLog7" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2, 4, -0.5)
 
-[node name="OakStairs2" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3.75, 1)
+[node name="OakStairs9" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 4, 0.5)
 
-[node name="OakStairs3" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3.75, 0)
+[node name="OakStairs10" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, 4, 0.5)
 
-[node name="OakStairs4" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3.75, -1)
+[node name="OakStairs11" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 4, 1.5)
 
-[node name="OakStairs5" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3.75, -2)
+[node name="OakStairs12" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, 4, 1.5)
 
-[node name="OakStairs6" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3.75, -3)
+[node name="OakLog10" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 1.5)
 
-[node name="OakStairs9" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-1.31134e-07, -8.74228e-08, 1, 3.82137e-15, -1, -8.74228e-08, 1, -7.64274e-15, 1.31134e-07, -2, 4.25, -3)
+[node name="OakLog11" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -1, 4, 1.5)
 
-[node name="OakStairs10" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 3.75, -3)
+[node name="OakLog12" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 4, 1.5)
 
-[node name="OakStairs11" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-1.31134e-07, -8.74228e-08, 1, 3.82137e-15, -1, -8.74228e-08, 1, -7.64274e-15, 1.31134e-07, -2, 4.25, 2)
+[node name="OakLog13" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 1, 4, 1.5)
 
-[node name="OakStairs12" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 3.75, -2)
+[node name="OakLog14" parent="Layer5" instance=ExtResource("1_mv175")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 1.5)
 
-[node name="OakStairs13" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 3.75, -1)
+[node name="OakStairs13" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 4, 2.5)
 
-[node name="OakStairs14" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 3.75, -2.98023e-08)
+[node name="OakStairs14" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, -2, 4, 2.5)
 
-[node name="OakStairs15" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 3.75, 1)
+[node name="OakStairs15" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-1.31134e-07, -8.74228e-08, 1, 3.82137e-15, -1, -8.74228e-08, 1, -7.64274e-15, 1.31134e-07, 2, 4, 2.5)
 
-[node name="OakStairs16" parent="Layer5" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 3.75, 2)
+[node name="OakStairs16" parent="Layer5" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3, 4, 2.5)
 
 [node name="Layer6" type="Node3D" parent="."]
 
-[node name="OakPlanks" parent="Layer6" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 1)
+[node name="OakStairs" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 5, -2.5)
 
-[node name="OakPlanks2" parent="Layer6" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 1)
+[node name="OakStairs2" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, -1, 5, -2.5)
 
-[node name="OakPlanks3" parent="Layer6" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 1)
+[node name="OakStairs3" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, -8.74228e-08, -1, -3.82137e-15, 1, -8.74228e-08, 4.37114e-08, 1, 5, -2.5)
 
-[node name="OakPlanks4" parent="Layer6" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -2)
+[node name="OakStairs4" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 5, -2.5)
 
-[node name="OakPlanks5" parent="Layer6" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2)
+[node name="OakStairs5" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 5, -1.5)
 
-[node name="OakPlanks6" parent="Layer6" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -2)
+[node name="OakPlanks" parent="Layer6" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -1.5)
 
-[node name="OakStairs" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 4.75, 2)
+[node name="OakPlanks2" parent="Layer6" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1.5)
 
-[node name="OakStairs2" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 4.75, 1)
+[node name="OakPlanks3" parent="Layer6" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(0.999992, -0.0040317, 0, 0.0040317, 0.999992, 0, 0, 0, 1, 1, 5, -1.5)
 
-[node name="OakStairs3" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 4.75, 0)
+[node name="OakStairs6" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 5, -1.5)
 
-[node name="OakStairs4" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 4.75, -1)
+[node name="OakStairs7" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 5, -0.5)
 
-[node name="OakStairs5" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 4.75, -2)
+[node name="OakStairs8" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 5, -0.5)
 
-[node name="OakStairs6" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 4.75, -3)
+[node name="OakStairs9" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 5, 0.5)
 
-[node name="OakStairs7" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, 4.75, -3)
+[node name="OakStairs10" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 5, 0.5)
 
-[node name="OakStairs8" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, 4.75, -2)
+[node name="OakStairs11" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 5, 1.5)
 
-[node name="OakStairs9" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, 4.75, -1)
+[node name="OakPlanks8" parent="Layer6" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, 1.5)
 
-[node name="OakStairs10" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, 4.75, 0)
+[node name="OakPlanks9" parent="Layer6" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 1.5)
 
-[node name="OakStairs11" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, 4.75, 1)
+[node name="OakPlanks10" parent="Layer6" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 1.5)
 
-[node name="OakStairs12" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2, 4.75, 2)
+[node name="OakStairs12" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 5, 1.5)
 
-[node name="OakStairs13" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-1.31134e-07, 8.74228e-08, -1, -1.14641e-14, -1, -8.74228e-08, -1, 0, 1.31134e-07, 1, 5.25, 2)
+[node name="OakStairs13" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 5, 2.5)
 
-[node name="OakStairs14" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-1.31134e-07, 8.74228e-08, -1, -1.14641e-14, -1, -8.74228e-08, -1, 0, 1.31134e-07, 1, 5.25, -3)
+[node name="OakStairs14" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 3.82137e-15, -1, -8.74228e-08, -1, 0, -4.37114e-08, -1, 5, 2.5)
 
-[node name="OakStairs15" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(2.18557e-07, -8.74228e-08, 1, -1.14641e-14, -1, -8.74228e-08, 1, 7.64274e-15, -2.18557e-07, -1, 5.25, -3)
+[node name="OakStairs15" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, -8.74228e-08, -1, -3.82137e-15, 1, -8.74228e-08, 4.37114e-08, 1, 5, 2.5)
 
-[node name="OakStairs16" parent="Layer6" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(2.18557e-07, -8.74228e-08, 1, -1.14641e-14, -1, -8.74228e-08, 1, 7.64274e-15, -2.18557e-07, -1, 5.25, 2)
+[node name="OakStairs16" parent="Layer6" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 5, 2.5)
 
 [node name="Layer7" type="Node3D" parent="."]
 
-[node name="OakPlanks" parent="Layer7" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 2)
+[node name="OakStairs" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 6, -2.5)
 
-[node name="OakPlanks2" parent="Layer7" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 1)
+[node name="OakPlanks2" parent="Layer7" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -2.5)
 
-[node name="OakPlanks3" parent="Layer7" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+[node name="OakStairs4" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 6, -2.5)
 
-[node name="OakPlanks4" parent="Layer7" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1)
+[node name="OakStairs2" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 6, -1.5)
 
-[node name="OakPlanks5" parent="Layer7" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -2)
+[node name="OakPlanks3" parent="Layer7" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1.5)
 
-[node name="OakPlanks6" parent="Layer7" instance=ExtResource("6_inyof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -3)
+[node name="OakStairs5" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 6, -1.5)
 
-[node name="OakStairs" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, 2)
+[node name="OakStairs3" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 6, -0.5)
 
-[node name="OakStairs2" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, 1)
+[node name="OakPlanks4" parent="Layer7" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -0.5)
 
-[node name="OakStairs3" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, 0)
+[node name="OakStairs6" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 6, -0.5)
 
-[node name="OakStairs4" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, -1)
+[node name="OakStairs7" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 6, 0.5)
 
-[node name="OakStairs5" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, -2)
+[node name="OakPlanks5" parent="Layer7" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0.5)
 
-[node name="OakStairs6" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, -2)
+[node name="OakStairs8" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 6, 0.5)
 
-[node name="OakStairs7" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 5.75, -3)
+[node name="OakStairs9" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 6, 1.5)
 
-[node name="OakStairs8" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 5.75, -3)
+[node name="OakPlanks6" parent="Layer7" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 1.5)
 
-[node name="OakStairs9" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 5.75, -2)
+[node name="OakStairs10" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 6, 1.5)
 
-[node name="OakStairs10" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 5.75, -1)
+[node name="OakStairs11" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 6, 2.5)
 
-[node name="OakStairs11" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 5.75, 0)
+[node name="OakPlanks7" parent="Layer7" instance=ExtResource("6_fxhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 2.5)
 
-[node name="OakStairs12" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 5.75, 1)
-
-[node name="OakStairs13" parent="Layer7" instance=ExtResource("9_ij2pt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 5.75, 2)
+[node name="OakStairs12" parent="Layer7" instance=ExtResource("9_a1q5l")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 6, 2.5)

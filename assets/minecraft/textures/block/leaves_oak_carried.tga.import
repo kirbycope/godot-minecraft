@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3w31aolrbh33"
+uid="uid://7el4sbt2iqx4"
 path.s3tc="res://.godot/imported/leaves_oak_carried.tga-004482ded2e351275f9f73cfa12ed385.s3tc.ctex"
-path.etc2="res://.godot/imported/leaves_oak_carried.tga-004482ded2e351275f9f73cfa12ed385.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/leaves_oak_carried.tga"
-dest_files=["res://.godot/imported/leaves_oak_carried.tga-004482ded2e351275f9f73cfa12ed385.s3tc.ctex", "res://.godot/imported/leaves_oak_carried.tga-004482ded2e351275f9f73cfa12ed385.etc2.ctex"]
+dest_files=["res://.godot/imported/leaves_oak_carried.tga-004482ded2e351275f9f73cfa12ed385.s3tc.ctex"]
 
 [params]
 

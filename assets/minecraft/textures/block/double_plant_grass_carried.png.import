@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pg120jl05uc"
+uid="uid://dpwjbjjysir7r"
 path.s3tc="res://.godot/imported/double_plant_grass_carried.png-17864539ecd0d0ff93585abc3a0f62cb.s3tc.ctex"
-path.etc2="res://.godot/imported/double_plant_grass_carried.png-17864539ecd0d0ff93585abc3a0f62cb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/double_plant_grass_carried.png"
-dest_files=["res://.godot/imported/double_plant_grass_carried.png-17864539ecd0d0ff93585abc3a0f62cb.s3tc.ctex", "res://.godot/imported/double_plant_grass_carried.png-17864539ecd0d0ff93585abc3a0f62cb.etc2.ctex"]
+dest_files=["res://.godot/imported/double_plant_grass_carried.png-17864539ecd0d0ff93585abc3a0f62cb.s3tc.ctex"]
 
 [params]
 

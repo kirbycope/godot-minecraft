@@ -1,41 +1,41 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxvton5yuiygl"]
+[gd_scene load_steps=8 format=3 uid="uid://mw2ds5aplo8r"]
 
-[ext_resource type="Texture2D" uid="uid://dnmj5jgbfnsl" path="res://assets/minecraft/textures/block/door_wood_upper.png" id="1_y5pbn"]
-[ext_resource type="Texture2D" uid="uid://cb77cfpsq6x68" path="res://assets/minecraft/textures/block/door_wood_lower.png" id="2_q6bal"]
+[ext_resource type="Texture2D" uid="uid://bh1uaaqwgx3xq" path="res://assets/minecraft/textures/block/door_wood_upper.png" id="1_r1jfr"]
+[ext_resource type="Texture2D" uid="uid://tphg37gci50x" path="res://assets/minecraft/textures/block/door_wood_lower.png" id="2_tujts"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wmjdq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xgv0"]
 size = Vector3(1, 2, 0.2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6xpd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvdex"]
 transparency = 1
-albedo_texture = ExtResource("1_y5pbn")
+albedo_texture = ExtResource("1_r1jfr")
 uv1_offset = Vector3(0.5, 0.5, 0)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="BoxMesh" id="BoxMesh_bbg5j"]
-material = SubResource("StandardMaterial3D_y6xpd")
+[sub_resource type="BoxMesh" id="BoxMesh_0xyff"]
+material = SubResource("StandardMaterial3D_uvdex")
 size = Vector3(1, 1, 0.2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48ub"]
-albedo_texture = ExtResource("2_q6bal")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_basdg"]
+albedo_texture = ExtResource("2_tujts")
 uv1_offset = Vector3(0.5, 0.5, 0)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="BoxMesh" id="BoxMesh_w1he7"]
-material = SubResource("StandardMaterial3D_h48ub")
+[sub_resource type="BoxMesh" id="BoxMesh_7nd3k"]
+material = SubResource("StandardMaterial3D_basdg")
 size = Vector3(1, 1, 0.2)
 
 [node name="OakDoor" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_wmjdq")
+shape = SubResource("BoxShape3D_8xgv0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("BoxMesh_bbg5j")
+mesh = SubResource("BoxMesh_0xyff")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-mesh = SubResource("BoxMesh_w1he7")
+mesh = SubResource("BoxMesh_7nd3k")

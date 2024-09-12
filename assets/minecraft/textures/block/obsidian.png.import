@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://svg82coekyys"
+uid="uid://cbe5dpi585pes"
 path.s3tc="res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.s3tc.ctex"
-path.etc2="res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/obsidian.png"
-dest_files=["res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.s3tc.ctex", "res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.etc2.ctex"]
+dest_files=["res://.godot/imported/obsidian.png-9e545d15025d575bc22eb7926df61b42.s3tc.ctex"]
 
 [params]
 

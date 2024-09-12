@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://didtmbctxcex4"
+uid="uid://doulsuoxs4fq6"
 path.s3tc="res://.godot/imported/chest_side.png-59ca10b3ece795ed63a75d4a0b4b623f.s3tc.ctex"
-path.etc2="res://.godot/imported/chest_side.png-59ca10b3ece795ed63a75d4a0b4b623f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/chest_side.png"
-dest_files=["res://.godot/imported/chest_side.png-59ca10b3ece795ed63a75d4a0b4b623f.s3tc.ctex", "res://.godot/imported/chest_side.png-59ca10b3ece795ed63a75d4a0b4b623f.etc2.ctex"]
+dest_files=["res://.godot/imported/chest_side.png-59ca10b3ece795ed63a75d4a0b4b623f.s3tc.ctex"]
 
 [params]
 

@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4jytstpljbqc"
+uid="uid://ytrgj333emrr"
 path.s3tc="res://.godot/imported/tallgrass_carried.tga-9d4102f8788204bdb4106c599cab762c.s3tc.ctex"
-path.etc2="res://.godot/imported/tallgrass_carried.tga-9d4102f8788204bdb4106c599cab762c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/tallgrass_carried.tga"
-dest_files=["res://.godot/imported/tallgrass_carried.tga-9d4102f8788204bdb4106c599cab762c.s3tc.ctex", "res://.godot/imported/tallgrass_carried.tga-9d4102f8788204bdb4106c599cab762c.etc2.ctex"]
+dest_files=["res://.godot/imported/tallgrass_carried.tga-9d4102f8788204bdb4106c599cab762c.s3tc.ctex"]
 
 [params]
 

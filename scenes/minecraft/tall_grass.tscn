@@ -1,24 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://2p64j7du435n"]
+[gd_scene load_steps=3 format=3 uid="uid://4iuqutv05sbt"]
 
-[ext_resource type="Texture2D" uid="uid://pg120jl05uc" path="res://assets/minecraft/textures/block/double_plant_grass_carried.png" id="1_euy2a"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r67ni"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_euy2a")
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_54e1e"]
-material = SubResource("StandardMaterial3D_r67ni")
-size = Vector2(1, 1)
-orientation = 2
+[ext_resource type="Texture2D" uid="uid://dpwjbjjysir7r" path="res://assets/minecraft/textures/block/double_plant_grass_carried.png" id="1_3atpw"]
+[ext_resource type="Texture2D" uid="uid://ytrgj333emrr" path="res://assets/minecraft/textures/block/tallgrass_carried.tga" id="2_p5klq"]
 
 [node name="TallGrass" type="Node3D"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
-mesh = SubResource("PlaneMesh_54e1e")
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0.14, 0)
+texture_filter = 0
+texture = ExtResource("1_3atpw")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.14, 0)
+texture_filter = 0
+texture = ExtResource("1_3atpw")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
-mesh = SubResource("PlaneMesh_54e1e")
+texture_filter = 0
+texture = ExtResource("2_p5klq")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("2_p5klq")

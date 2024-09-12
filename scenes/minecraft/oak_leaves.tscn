@@ -1,99 +1,22 @@
-[gd_scene load_steps=15 format=3 uid="uid://vnxe2hr5r47v"]
+[gd_scene load_steps=5 format=3 uid="uid://cw25qfeo4pimk"]
 
-[ext_resource type="Texture2D" uid="uid://b3w31aolrbh33" path="res://assets/minecraft/textures/block/leaves_oak_carried.tga" id="1_vgo31"]
+[ext_resource type="Texture2D" uid="uid://7el4sbt2iqx4" path="res://assets/minecraft/textures/block/leaves_oak_carried.tga" id="1_o8ny3"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4egd6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ocrdh"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovvg7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ssck"]
 transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_vgo31")
+albedo_texture = ExtResource("1_o8ny3")
+uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_h18he"]
-material = SubResource("StandardMaterial3D_ovvg7")
-size = Vector2(1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr8lu"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_vgo31")
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_bv1hl"]
-material = SubResource("StandardMaterial3D_jr8lu")
-size = Vector2(1, 1)
-orientation = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqkne"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_vgo31")
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_5tyqo"]
-material = SubResource("StandardMaterial3D_jqkne")
-size = Vector2(1, 1)
-orientation = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5ap4"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_vgo31")
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_8gfyg"]
-material = SubResource("StandardMaterial3D_l5ap4")
-size = Vector2(1, 1)
-orientation = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pxbo"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_vgo31")
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_onlvd"]
-material = SubResource("StandardMaterial3D_1pxbo")
-size = Vector2(1, 1)
-orientation = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orh0y"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_vgo31")
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_qctmi"]
-material = SubResource("StandardMaterial3D_orh0y")
-size = Vector2(1, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_xhqch"]
+material = SubResource("StandardMaterial3D_8ssck")
 
 [node name="OakLeaves" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_4egd6")
+shape = SubResource("BoxShape3D_ocrdh")
 
-[node name="Top" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("PlaneMesh_h18he")
-
-[node name="North" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
-mesh = SubResource("PlaneMesh_bv1hl")
-
-[node name="East" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0, 0)
-mesh = SubResource("PlaneMesh_5tyqo")
-
-[node name="South" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-mesh = SubResource("PlaneMesh_8gfyg")
-skeleton = NodePath("../North")
-
-[node name="West" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0, 0)
-mesh = SubResource("PlaneMesh_onlvd")
-
-[node name="Bottom" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-mesh = SubResource("PlaneMesh_qctmi")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xhqch")

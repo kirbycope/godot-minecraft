@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0r0u2iwj1hw2"
+uid="uid://be5lc05f74gvx"
 path.s3tc="res://.godot/imported/log_oak_top.png-12a6a77e3e9043a9d0d51ad39aed9a26.s3tc.ctex"
-path.etc2="res://.godot/imported/log_oak_top.png-12a6a77e3e9043a9d0d51ad39aed9a26.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/log_oak_top.png"
-dest_files=["res://.godot/imported/log_oak_top.png-12a6a77e3e9043a9d0d51ad39aed9a26.s3tc.ctex", "res://.godot/imported/log_oak_top.png-12a6a77e3e9043a9d0d51ad39aed9a26.etc2.ctex"]
+dest_files=["res://.godot/imported/log_oak_top.png-12a6a77e3e9043a9d0d51ad39aed9a26.s3tc.ctex"]
 
 [params]
 

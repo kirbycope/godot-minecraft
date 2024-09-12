@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctns3h6to1b5i"
+uid="uid://clu7yoj4e76en"
 path.s3tc="res://.godot/imported/planks_oak.png-e4414f9375801c4d1de3900d8b6a2ebe.s3tc.ctex"
-path.etc2="res://.godot/imported/planks_oak.png-e4414f9375801c4d1de3900d8b6a2ebe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/minecraft/textures/block/planks_oak.png"
-dest_files=["res://.godot/imported/planks_oak.png-e4414f9375801c4d1de3900d8b6a2ebe.s3tc.ctex", "res://.godot/imported/planks_oak.png-e4414f9375801c4d1de3900d8b6a2ebe.etc2.ctex"]
+dest_files=["res://.godot/imported/planks_oak.png-e4414f9375801c4d1de3900d8b6a2ebe.s3tc.ctex"]
 
 [params]
 

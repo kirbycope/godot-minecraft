@@ -1,40 +1,47 @@
-[gd_scene load_steps=7 format=3 uid="uid://b50ssxmxgu2k4"]
+[gd_scene load_steps=8 format=3 uid="uid://lohdu06fnmn2"]
 
-[ext_resource type="Texture2D" uid="uid://s1hstwyjm38y" path="res://assets/minecraft/textures/block/cobblestone.png" id="1_blk8c"]
+[ext_resource type="Texture2D" uid="uid://bdq1a5vppjoow" path="res://assets/minecraft/textures/block/cobblestone.png" id="1_4tb3d"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kpeik"]
-size = Vector3(1, 0.5, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_bcns1"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_t2qhy"]
 size = Vector3(1, 0.5, 0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfi70"]
-albedo_texture = ExtResource("1_blk8c")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykams"]
+albedo_texture = ExtResource("1_4tb3d")
+uv1_offset = Vector3(0, 0.25, 0.25)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="BoxMesh" id="BoxMesh_wslfo"]
-material = SubResource("StandardMaterial3D_tfi70")
-size = Vector3(1, 0.5, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_oeotq"]
-material = SubResource("StandardMaterial3D_tfi70")
+[sub_resource type="BoxMesh" id="BoxMesh_da5yt"]
+material = SubResource("StandardMaterial3D_ykams")
 size = Vector3(1, 0.5, 0.5)
 
-[node name="OakStairs" type="StaticBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_66fan"]
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxok8"]
+albedo_texture = ExtResource("1_4tb3d")
+uv1_offset = Vector3(0, -0.25, 0)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_q8wqa"]
+material = SubResource("StandardMaterial3D_pxok8")
+size = Vector3(1, 0.5, 1)
+
+[node name="CobblestoneStairs" type="StaticBody3D"]
+
+[node name="CollisionTop" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.25)
+shape = SubResource("BoxShape3D_t2qhy")
+
+[node name="MeshTop" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.25)
+mesh = SubResource("BoxMesh_da5yt")
+
+[node name="CollisionBottom" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_66fan")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_kpeik")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.25)
-shape = SubResource("BoxShape3D_bcns1")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_wslfo")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.25)
-mesh = SubResource("BoxMesh_oeotq")
+[node name="MeshBottom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("BoxMesh_q8wqa")

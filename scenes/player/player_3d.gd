@@ -31,6 +31,7 @@ var timer_jump: float = 0.0
 @export var force_pushing_sprinting: float = 2.0
 @export var look_sensitivity_controller: float = 120.0
 @export var look_sensitivity_mouse: float = 0.2
+@export var look_sensitivity_virtual: float = 60.0
 @export var perspective: int = 0
 @export var player_crawling_speed: float = 0.75
 @export var player_current_speed: float = 3.0
@@ -208,6 +209,7 @@ func _physics_process(delta) -> void:
 		for action in look_actions:
 			# Check if the action is _pressesd_
 			if Input.is_action_pressed(action):
+
 				# Rotate camera based on controller movement
 				camera_rotate_by_controller(delta)
 
@@ -341,10 +343,23 @@ func camera_rotate_by_controller(delta: float) -> void:
 	# Calculate the input strength for vertical and horizontal movement
 	var vertical_input = look_up - look_down
 	var horizontal_input = look_right - look_left
+
+	var vertical_rotation_speed = abs(vertical_input)
+	var horizontal_rotation_speed = abs(horizontal_input)
+
+	# Check if the player is using a controller
+	if Input.is_joy_known(0):
+
+		# Adjust rotation speed based on input intensity (magnitude of the right-stick movement)
+		vertical_rotation_speed *= look_sensitivity_controller
+		horizontal_rotation_speed *= look_sensitivity_controller
 	
-	# Adjust rotation speed based on input intensity (magnitude of the right stick movement)
-	var vertical_rotation_speed = abs(vertical_input) * look_sensitivity_controller
-	var horizontal_rotation_speed = abs(horizontal_input) * look_sensitivity_controller
+	# The input must have been triggerd by a touch event
+	else:
+
+		# Adjust rotation speed based on input intensity (magnitude of the touch-drag movement)
+		vertical_rotation_speed *= look_sensitivity_virtual
+		horizontal_rotation_speed *= look_sensitivity_virtual
 
 	# Calculate the desired vertical rotation based on controller motion
 	var new_rotation_x = camera_mount.rotation_degrees.x + (vertical_input * vertical_rotation_speed * delta)

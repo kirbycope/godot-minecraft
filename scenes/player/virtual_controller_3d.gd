@@ -3,10 +3,15 @@ extends Node2D
 const MAX_DISTANCE := 64
 const SWIPE_DEADZONE := 8
 
-var swipe_current_position = null
-var swipe_event_index = null
-var swipe_delta = null
-var swipe_initial_position = null
+var left_swipe_current_position = null
+var left_swipe_event_index = null
+var left_swipe_delta = null
+var left_swipe_initial_position = null
+var right_swipe_current_position = null
+var right_swipe_event_index = null
+var right_swipe_delta = null
+var right_swipe_initial_position = null
+var right_touch_initial_time = null
 var tap_event_index = null
 var tap_initial_position = null
 
@@ -14,26 +19,50 @@ var tap_initial_position = null
 ## Called when CanvasItem has been requested to redraw (after queue_redraw is called, either manually or by the engine).
 func _draw() -> void:
 
-	# Check if there is a swipe event
-	if swipe_event_index != null:
+	# Check if there is a left-swipe event
+	if left_swipe_event_index != null:
 
 		# Define the position to draw the gray circle
-		var draw_position_gray =  swipe_initial_position
+		var draw_position_gray =  left_swipe_initial_position
 
 		# Draw a gray circle at the event origin
 		draw_circle(draw_position_gray, 64, Color(0.502, 0.502, 0.502, 0.5))
 
 		# Check if for drag motion
-		if swipe_current_position != null:
+		if left_swipe_current_position != null:
 
 			# Check if the swipe delta is more than the maximum distance
-			if swipe_delta.length() > MAX_DISTANCE:
+			if left_swipe_delta.length() > MAX_DISTANCE:
 
 				# Clamp the offset vector's length
-				swipe_delta = swipe_delta.normalized() * MAX_DISTANCE
+				left_swipe_delta = left_swipe_delta.normalized() * MAX_DISTANCE
 
 			# Define the position to draw the white circle
-			var draw_position_white = swipe_initial_position + swipe_delta
+			var draw_position_white = left_swipe_initial_position + left_swipe_delta
+
+			# Draw a white circle at the event location
+			draw_circle(draw_position_white, 48, Color(1.0, 1.0, 1.0, 0.5))
+
+	# Check if there is a right-swipe event
+	if right_swipe_event_index != null:
+
+		# Define the position to draw the gray circle
+		var draw_position_gray =  right_swipe_initial_position
+
+		# Draw a gray circle at the event origin
+		draw_circle(draw_position_gray, 64, Color(0.502, 0.502, 0.502, 0.5))
+
+		# Check if for drag motion
+		if right_swipe_current_position != null:
+
+			# Check if the swipe delta is more than the maximum distance
+			if right_swipe_delta.length() > MAX_DISTANCE:
+
+				# Clamp the offset vector's length
+				right_swipe_delta = right_swipe_delta.normalized() * MAX_DISTANCE
+
+			# Define the position to draw the white circle
+			var draw_position_white = right_swipe_initial_position + right_swipe_delta
 
 			# Draw a white circle at the event location
 			draw_circle(draw_position_white, 48, Color(1.0, 1.0, 1.0, 0.5))
@@ -49,40 +78,40 @@ func _input(event: InputEvent) -> void:
 		if event.is_pressed():
 
 			# Check if the touch event took place on the left-half of the screen and the event has not been recorded
-			if event.position.x < get_viewport().get_visible_rect().size.x / 2 and !swipe_event_index:
+			if event.position.x < get_viewport().get_visible_rect().size.x / 2 and !left_swipe_event_index:
 
 				# Record the touch event index
-				swipe_event_index = event.index
+				left_swipe_event_index = event.index
 
 				# Record inital position
-				swipe_initial_position = event.position
+				left_swipe_initial_position = event.position
 
-			# The touch event must have took place on the right-half of the screen
-			else:
+			# Check if the touch event took place on the right-half of the screen and the event has not been recorded
+			if event.position.x > get_viewport().get_visible_rect().size.x / 2 and !right_swipe_event_index:
+
+				# Record the event time 
+				right_touch_initial_time = Time.get_ticks_msec()
 
 				# Record the touch event index
-				tap_event_index = event.index
+				right_swipe_event_index = event.index
 
 				# Record inital position
-				tap_initial_position = event.position
-
-				# Trigger the [jump] action _pressed_
-				Input.action_press("jump")
+				right_swipe_initial_position = event.position
 
 		# [touch] screen just _released_
 		else:
 
-			# Check if the event is related to the swipe event
-			if event.index == swipe_event_index:
+			# Check if the event is related to the left-swipe event
+			if event.index == left_swipe_event_index:
 
 				# Reset swipe current position
-				swipe_current_position = null
+				left_swipe_current_position = null
 
 				# Reset swipe initial position
-				swipe_initial_position = null
+				left_swipe_initial_position = null
 
 				# Reset swipe index
-				swipe_event_index = null
+				left_swipe_event_index = null
 
 				# Trigger the [move_down] action _released_
 				Input.action_release("move_down")
@@ -96,49 +125,100 @@ func _input(event: InputEvent) -> void:
 				# Trigger the [move_up] action _released_
 				Input.action_release("move_up")
 
-			# The touch event must be related to the tap event
-			if event.index == tap_event_index:
+			# Check if the event is related to the right-swipe event
+			if event.index == right_swipe_event_index:
 
-				# Reset tap position
-				tap_initial_position = null
+				# Get the current game time
+				var time_now = Time.get_ticks_msec()
 
-				# Reset tap index
-				tap_event_index = null
+				# Check if _this_ touch is within 120 milliseconds
+				if time_now - right_touch_initial_time < 120:
+					
+					# Trigger the [jump] action _pressed_
+					Input.action_press("jump")
+					Input.action_release("jump")
 
-				# Trigger the [jump] action _released_
-				Input.action_release("jump")
+				# Reset swipe current position
+				right_swipe_current_position = null
+
+				# Reset swipe initial position
+				right_swipe_initial_position = null
+
+				# Reset swipe index
+				right_swipe_event_index = null
+
+				# Trigger the [look_down] action _released_
+				Input.action_release("look_down")
+
+				# Trigger the [look_left] action _released_
+				Input.action_release("look_left")
+
+				# Trigger the [look_right] action _released_
+				Input.action_release("look_right")
+
+				# Trigger the [look_up] action _released_
+				Input.action_release("look_up")
 
 	# Check if the input is a Drag event
 	if event is InputEventScreenDrag:
 
-		# Check if the event is related to the swipe event
-		if event.index == swipe_event_index:
+		# Check if the event is related to the left-swipe event
+		if event.index == left_swipe_event_index:
 
 			# Record swipe current position
-			swipe_current_position = event.position
+			left_swipe_current_position = event.position
 
 			# Calculate the difference between the swipe initial position and the current swipe position
-			swipe_delta = swipe_current_position - swipe_initial_position
+			left_swipe_delta = left_swipe_current_position - left_swipe_initial_position
 
 			# Trigger the [move_left] action _pressed_
-			if swipe_delta.x < - SWIPE_DEADZONE:
+			if left_swipe_delta.x < - SWIPE_DEADZONE:
 				Input.action_release("move_right")
 				Input.action_press("move_left")
 
 			# Trigger the [move_right] action _pressed_
-			if swipe_delta.x > SWIPE_DEADZONE:
+			if left_swipe_delta.x > SWIPE_DEADZONE:
 				Input.action_release("move_left")
 				Input.action_press("move_right")
 
 			# Trigger the [move_up] action _pressed_
-			if swipe_delta.y < SWIPE_DEADZONE:
+			if left_swipe_delta.y < SWIPE_DEADZONE:
 				Input.action_release("move_down")
 				Input.action_press("move_up")
 
 			# Trigger the [move_down] action _pressed_
-			if swipe_delta.y > SWIPE_DEADZONE:
+			if left_swipe_delta.y > SWIPE_DEADZONE:
 				Input.action_release("move_up")
 				Input.action_press("move_down")
+
+		# Check if the event is related to the right-swipe event
+		if event.index == right_swipe_event_index:
+
+			# Record swipe current position
+			right_swipe_current_position = event.position
+
+			# Calculate the difference between the swipe initial position and the current swipe position
+			right_swipe_delta = right_swipe_current_position - right_swipe_initial_position
+
+			# Trigger the [look_left] action _pressed_
+			if right_swipe_delta.x < - SWIPE_DEADZONE*2:
+				Input.action_release("look_right")
+				Input.action_press("look_left")
+
+			# Trigger the [look_right] action _pressed_
+			if right_swipe_delta.x > SWIPE_DEADZONE*2:
+				Input.action_release("look_left")
+				Input.action_press("look_right")
+
+			# Trigger the [look_up] action _pressed_
+			if right_swipe_delta.y < SWIPE_DEADZONE*2:
+				Input.action_release("look_down")
+				Input.action_press("look_up")
+
+			# Trigger the [look_down] action _pressed_
+			if right_swipe_delta.y > SWIPE_DEADZONE*2:
+				Input.action_release("look_up")
+				Input.action_press("look_down")
 
 	# Redraw canvas items via `_draw()`
 	queue_redraw()

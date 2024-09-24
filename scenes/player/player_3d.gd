@@ -689,7 +689,7 @@ func setup_controls():
 		# Controller [left-stick, forward]
 		var joystick_event = InputEventJoypadMotion.new()
 		joystick_event.axis = JOY_AXIS_LEFT_Y
-		joystick_event.axis_value = 1.0
+		joystick_event.axis_value = -1.0
 		InputMap.action_add_event("move_up", joystick_event)
 
 	# Check if [move_left] action is not in the Input Map
@@ -723,7 +723,7 @@ func setup_controls():
 		# Controller [left-stick, backward]
 		var joystick_event = InputEventJoypadMotion.new()
 		joystick_event.axis = JOY_AXIS_LEFT_Y
-		joystick_event.axis_value = -1.0
+		joystick_event.axis_value = 1.0
 		InputMap.action_add_event("move_down", joystick_event)
 
 	# Check if [move_right] action is not in the Input Map
@@ -739,7 +739,7 @@ func setup_controls():
 
 		# Controller [left-stick, right]
 		var joystick_event = InputEventJoypadMotion.new()
-		joystick_event.axis = JOY_AXIS_RIGHT_X
+		joystick_event.axis = JOY_AXIS_LEFT_X
 		joystick_event.axis_value = 1.0
 		InputMap.action_add_event("move_right", joystick_event)
 
@@ -789,7 +789,7 @@ func setup_controls():
 		# Controller [right-stick, up]
 		var joystick_event = InputEventJoypadMotion.new()
 		joystick_event.axis = JOY_AXIS_RIGHT_Y
-		joystick_event.axis_value = 1.0
+		joystick_event.axis_value = -1.0
 		InputMap.action_add_event("look_up", joystick_event)
 
 	# Check if [look_left] action is not in the Input Map
@@ -823,7 +823,7 @@ func setup_controls():
 		# Controller [right-stick, down]
 		var joystick_event = InputEventJoypadMotion.new()
 		joystick_event.axis = JOY_AXIS_RIGHT_Y
-		joystick_event.axis_value = -1.0
+		joystick_event.axis_value = 1.0
 		InputMap.action_add_event("look_down", joystick_event)
 
 	# Check if [look_right] action is not in the Input Map
@@ -938,7 +938,7 @@ func setup_controls():
 
 		# Controller 🄻2
 		var joypad_axis_event = InputEventJoypadMotion.new()
-		joypad_axis_event.axis = JOY_AXIS_LEFT_X
+		joypad_axis_event.axis = JOY_AXIS_TRIGGER_LEFT
 		joypad_axis_event.axis_value = 1.0
 		InputMap.action_add_event("left_kick", joypad_axis_event)
 
@@ -976,8 +976,8 @@ func setup_controls():
 
 		# Controller 🅁2
 		var joypad_axis_event = InputEventJoypadMotion.new()
-		joypad_axis_event.axis = JOY_AXIS_RIGHT_X
-		joypad_axis_event.axis_value = -1.0
+		joypad_axis_event.axis = JOY_AXIS_TRIGGER_RIGHT
+		joypad_axis_event.axis_value = 1.0
 		InputMap.action_add_event("right_kick", joypad_axis_event)
 
 	# Ⓡ3

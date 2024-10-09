@@ -11,8 +11,14 @@ extends Node
 # Flag for if the app was opened in Debug mode.
 var debug_mode: bool = OS.is_debug_build()
 
+## Flag for if the current scene has a fixed camera.
+var fixed_camera: bool = false
+
 # Flag for if the game is Paused.
 var game_paused: bool = false
+
+## Flag for if the player's movement is locked
+var movement_locked: bool = false
 
 # The current time in RFC 3339 format.
 var time_stamp_utc: bool = true

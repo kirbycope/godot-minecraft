@@ -36,5 +36,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
 [node name="PlainsSmallHouse6" parent="." instance=ExtResource("3_3dvem")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.5, 0, 0)
 
-[node name="Player3D" parent="." instance=ExtResource("4_2tahs")]
+[node name="Player" parent="." instance=ExtResource("4_2tahs")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2, 0.5, 2)

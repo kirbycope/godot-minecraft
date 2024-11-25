@@ -11,10 +11,10 @@ func _ready() -> void:
 	Globals.game_paused = false
 
 	# Put the player in first-person perspective
-	$Player3D.perspective = 1
+	$Player.perspective = 1
 
 	# Set camera's position
-	$Player3D/CameraMount/Camera3D.position = Vector3(0.0, 0.0, 0.0)
+	$Player/CameraMount/Camera3D.position = Vector3(0.0, 0.0, 0.0)
 
 	# Align visuals with the camera
-	$Player3D/Visuals.rotation = Vector3(0.0, 0.0, $Player3D/CameraMount.rotation.z)
+	$Player/Visuals.rotation = Vector3(0.0, 0.0, $Player/CameraMount.rotation.z)

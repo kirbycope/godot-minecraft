@@ -74,12 +74,16 @@ var is_running: bool = false
 var is_sprinting: bool = false
 var is_standing: bool = false
 var is_walking: bool = false
+var virtual_velocity: Vector3 = Vector3.ZERO
 var timer_jump: float = 0.0
 
 # Note: `@export` variables are available for editing in the property editor.
+@export var enable_crouching: bool = true
 @export var enable_double_jump: bool = false
 @export var enable_flying: bool = false
 @export var enable_jumping: bool = true
+@export var enable_kicking: bool = true
+@export var enable_punching: bool = true
 @export var enable_vibration: bool = false
 @export var force_kicking: float = 2.0
 @export var force_kicking_sprinting: float = 3.0
@@ -88,6 +92,10 @@ var timer_jump: float = 0.0
 @export var force_pushing: float = 1.0
 @export var force_pushing_sprinting: float = 2.0
 @export var jump_velocity: float = 4.5
+@export var lock_camera: bool = false
+@export var lock_movement_x: bool = false
+@export var lock_movement_y: bool = false
+@export var lock_perspective: bool = false
 @export var look_sensitivity_controller: float = 120.0
 @export var look_sensitivity_mouse: float = 0.2
 @export var look_sensitivity_virtual: float = 60.0
@@ -142,11 +150,11 @@ func _ready() -> void:
 ## Called when there is an input event.
 func _input(event) -> void:
 
-	# If the game is not paused...
+	# Check if the game is not paused
 	if !Globals.game_paused:
 
-		# Check if the camera is using a third-person perspective
-		if perspective == 0:
+		# Check if the camera is using a third-person perspective and the perspective is not locked
+		if perspective == 0 and !lock_perspective:
 
 			# [zoom in] button _pressed_
 			if event.is_action_pressed("zoom_in"):
@@ -161,37 +169,47 @@ func _input(event) -> void:
 				camera.transform.origin.z = clamp(camera.transform.origin.z - zoom_speed, zoom_min, zoom_max)
 
 		# Check for mouse motion and the camera is not locked
-		if event is InputEventMouseMotion and !Globals.fixed_camera:
+		if event is InputEventMouseMotion and !lock_camera:
 
 			# Rotate camera based on mouse movement
 			camera_rotate_by_mouse(event)
 
-		# [select] button _pressed_
-		if event.is_action_pressed("select"):
+		# [select] button _pressed_ and the camera is not locked
+		if event.is_action_pressed("select") and !lock_camera:
 
 			# Check if in third-person
 			if perspective == 0:
+
 				# Flag the player as in "first" person
 				perspective = 1
+
 				# Set camera's position
-				camera.position = Vector3(0.0, 0.0, 0.0)
+
+				camera.position = Vector3.ZERO
+
 				# Set the camera's raycast position to match the camera's position
-				raycast_lookat.position = Vector3(0.0, 0.0, 0.0)
+				raycast_lookat.position = Vector3.ZERO
+
 				# Align visuals with the camera
 				visuals.rotation = Vector3(0.0, 0.0, camera_mount.rotation.z)
-				
+
 			# Check if in first-person
 			elif perspective == 1:
+
 				# Flag the player as in "third" person
 				perspective = 0
+
 				# Set camera mount's position
 				camera_mount.position = Vector3(0.0, 1.65, 0.0)
+
 				# Set camera's position
 				camera.position = Vector3(0.0, 0.6, 2.5)
+
 				# Set the camera's raycast position to match the player's position
 				raycast_lookat.position = Vector3(0.0, 0.0, -2.5)
+
 				# Set the visual's rotation
-				visuals.rotation = Vector3(0.0, 0.0, 0.0)
+				visuals.rotation = Vector3.ZERO
 
 
 ## Called each physics frame with the time since the last physics frame as argument (delta, in seconds).
@@ -215,10 +233,13 @@ func _physics_process(delta) -> void:
 
 		# Handle [look_*] using controller
 		var look_actions = ["look_down", "look_up", "look_left", "look_right"]
+
 		# Check each "look" action in the list
 		for action in look_actions:
-			# Check if the action is _pressesd_ and the camera is not locked
-			if Input.is_action_pressed(action) and !Globals.fixed_camera:
+
+			# Check if the action is _pressed_ and the camera is not locked
+			if Input.is_action_pressed(action) and !lock_camera:
+
 				# Rotate camera based on controller movement
 				camera_rotate_by_controller(delta)
 	
@@ -231,8 +252,8 @@ func _physics_process(delta) -> void:
 			# Handle player movement
 			update_velocity()
 
-		# Check if the animation player is unlocked and the player's motion is unlocked
-		if !is_animation_locked and !Globals.movement_locked:
+		# Check if the animation player is unlocked
+		if !is_animation_locked:
 
 			# Move player
 			move_and_slide()
@@ -423,17 +444,36 @@ func update_velocity() -> void:
 				# Update the camera to look in the direction based on player input
 				visuals.look_at(position + direction)
 
-			# Update horizontal veolicty
-			velocity.x = direction.x * speed_current
+			# Check if movement along the x-axis is locked
+			if lock_movement_x:
 
-			# Update vertical velocity
-			velocity.z = direction.z * speed_current
+				# Update [virtual] horizontal velocity
+				virtual_velocity.x = direction.x * speed_current
+
+			else:
+
+				# Update horizontal velocity
+				velocity.x = direction.x * speed_current
+
+			# Check if movement along the z-axis is locked
+			if lock_movement_y:
+
+				# Update vertical velocity
+				virtual_velocity.z = direction.z * speed_current
+
+			else:
+
+				# Update vertical velocity
+				velocity.z = direction.z * speed_current
 
 	# No movement detected
 	else:
 
-		# Update horizontal veolicty
+		# Update horizontal velocity
 		velocity.x = move_toward(velocity.x, 0, speed_current)
 
-		# Update vertical veolocity
+		# Update vertical velocity
 		velocity.z = move_toward(velocity.z, 0, speed_current)
+
+		# Update [virtual] velocity
+		virtual_velocity = Vector3.ZERO

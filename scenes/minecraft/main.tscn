@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://mf2q04b80yvi" path="res://assets/minecraft/sounds/1_8_minecraft.mp3" id="2_g2f4g"]
 [ext_resource type="PackedScene" uid="uid://dh4x2u6bg8wgx" path="res://scenes/minecraft/sky_block.tscn" id="2_vvsy2"]
 [ext_resource type="PackedScene" uid="uid://bttq5d7qxdnen" path="res://scenes/minecraft/plains_small_house_6.tscn" id="3_3dvem"]
-[ext_resource type="PackedScene" uid="uid://b80ulfowrgt55" path="res://scenes/player/player_3d.tscn" id="4_2tahs"]
+[ext_resource type="PackedScene" uid="uid://ujh51l2wv1vk" path="res://addons/3d_player_controller/player_3d.tscn" id="6_fsbk2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5c8uy"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
 [node name="PlainsSmallHouse6" parent="." instance=ExtResource("3_3dvem")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.5, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("4_2tahs")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2, 0.5, 2)
-
 [node name="SkyBlock" parent="." instance=ExtResource("2_vvsy2")]
+
+[node name="Player" parent="." instance=ExtResource("6_fsbk2")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 2, 0.5, 2)

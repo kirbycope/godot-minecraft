@@ -1,67 +1,10 @@
 extends CharacterBody3D
 
-# Change the animation names to those in character's animation player
-const animation_crawling = "Crawling_In_Place"
-
-const animation_crouching = "Crouching_Idle"
-const animation_crouching_aiming_rifle = "Rifle_Aiming_Idle_Crouching"
-const animation_crouching_firing_rifle = "Rifle_Firing_Crouching"
-const animation_crouching_holding_rifle = "Rifle_Idle_Crouching"
-const animation_crouching_move = "Sneaking_In_Place"
-const animation_crouching_move_holding_rifle = "Rifle_Walk_Crouching"
-const animation_crouching_holding_tool = "Tool_Idle_Crouching"
-
-const animation_flying = "Flying_In_Place"
-const animation_flying_fast = "Flying_Fast_In_Place"
-
-const animation_hanging = "Hanging_Idle"
-const animation_hanging_shimmy_left = "Braced_Hang_Shimmy_Left_In_Place"
-const animation_hanging_shimmy_right = "Braced_Hang_Shimmy_Right_In_Place"
-
-const animation_jumping = "Falling_Idle"
-const animation_jumping_holding_rifle = "Rifle_Falling_Idle"
-const animation_jumping_holding_tool = "Tool_Falling_Idle"
-
-const animation_standing = "Standing_Idle"
-const animation_standing_aiming_rifle = "Rifle_Aiming_Idle"
-const animation_standing_firing_rifle = "Rifle_Firing"
-const animation_standing_casting_fishing_rod = "Fishing_Cast"
-const animation_standing_holding_fishing_rod = "Fishing_Idle"
-const animation_standing_reeling_fishing_rod = "Fishing_Reel"
-const animation_standing_holding_rifle = "Rifle_Low_Idle"
-const animation_standing_holding_tool = "Tool_Standing_Idle"
-
-const animation_running = "Running_In_Place"
-const animation_running_aiming_rifle = "Rifle_Aiming_Run_In_Place"
-const animation_running_holding_rifle = "Rifle_Low_Run_In_Place"
-
-const animation_skateboarding_fast = "Skateboarding_Fast_In_Place"
-const animation_skateboarding_normal = "Skateboarding_In_Place"
-const animation_skateboarding_slow = "Skateboarding_Slow_In_Place"
-
-const animation_sprinting = "Sprinting_In_Place"
-const animation_sprinting_holding_rifle = "Rifle_Sprinting_In_Place"
-const animation_sprinting_holding_tool = "Tool_Sprinting_In_Place"
-
-const animation_swimming = "Swimming_In_Place"
-const animation_treading_water = "Treading_Water"
-
-const animation_walking = "Walking_In_Place"
-const animation_walking_aiming_rifle = "Rifle_Walking_Aiming"
-const animation_walking_firing_rifle = "Rifle_Walking_Firing"
-const animation_walking_holding_rifle = "Rifle_Low_Run_In_Place"
-const animation_walking_holding_tool = "Tool_Walking_In_Place"
-
 const bone_name_left_hand = "mixamorigLeftHandIndex1"
 const bone_name_right_hand = "mixamorigRightHandIndex1"
-const kicking_low_left = "Kicking_Low_Left"
-const kicking_low_right = "Kicking_Low_Right"
-const punching_high_left = "Punching_High_Left"
-const punching_high_right = "Punching_High_Right"
-const punching_low_left = "Punching_Low_Left"
-const punching_low_right = "Punching_Low_Right"
 
 # State machine variables
+
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_aiming: bool = false
 var is_animation_locked: bool = false
@@ -70,6 +13,8 @@ var is_climbing: bool = false
 var is_crawling: bool = false
 var is_crouching: bool = false
 var is_double_jumping: bool = false
+var is_driving: bool = false
+var is_driving_in
 var is_falling: bool = false
 var is_grounded: bool = true
 var is_firing: bool = false
@@ -87,16 +32,18 @@ var is_punching_right: bool = false
 var is_reeling: bool = false
 var is_running: bool = false
 var is_skateboarding: bool = false
+var is_skateboarding_on
 var is_sprinting: bool = false
 var is_standing: bool = false
+var is_swimming_in
 var is_swimming: bool = false
 var is_walking: bool = false
-var swimming_in
 var virtual_velocity: Vector3 = Vector3.ZERO
 
 # Note: `@export` variables are available for editing in the property editor.
 @export var current_state: States.State = States.State.STANDING
 @export var enable_chat: bool = false
+@export var enable_emotes: bool = true
 @export var enable_crouching: bool = true
 @export var enable_double_jump: bool = false
 @export var enable_flying: bool = false
@@ -104,6 +51,7 @@ var virtual_velocity: Vector3 = Vector3.ZERO
 @export var enable_kicking: bool = true
 @export var enable_punching: bool = true
 @export var enable_vibration: bool = false
+@export var friction_skateboarding: float = 0.01
 @export var force_kicking: float = 2.0
 @export var force_kicking_sprinting: float = 3.0
 @export var force_punching: float = 1.0
@@ -139,6 +87,7 @@ var virtual_velocity: Vector3 = Vector3.ZERO
 @onready var base_state: BaseState = $States/Base
 @onready var camera_mount = $CameraMount
 @onready var camera = $CameraMount/Camera3D
+@onready var collision_shape = $CollisionShape3D
 @onready var collision_height = $CollisionShape3D.shape.height
 @onready var collision_position = $CollisionShape3D.position
 @onready var held_item_mount = $Visuals/HeldItemMount
@@ -182,8 +131,11 @@ func _input(event) -> void:
 		# Check for mouse motion and the camera is not locked
 		if event is InputEventMouseMotion and !lock_camera:
 
-			# Rotate camera based on mouse movement
-			camera_rotate_by_mouse(event)
+			# Check if the mouse is captured
+			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+
+				# Rotate camera based on mouse movement
+				camera_rotate_by_mouse(event)
 
 		# [select] button _pressed_ and the camera is not locked
 		if event.is_action_pressed("select") and !lock_camera:
@@ -268,8 +220,8 @@ func _physics_process(delta) -> void:
 				# Rotate camera based on controller movement
 				camera_rotate_by_controller(delta)
 	
-		# Check if the player is not "hanging"
-		if !is_hanging:
+		# Check if the player is not "driving" and not "hanging"
+		if !is_driving and !is_hanging:
 
 			# Check if the player is "swimming"
 			if is_swimming:
@@ -436,7 +388,7 @@ func camera_rotate_by_mouse(event: InputEvent) -> void:
 	new_rotation_x = clamp(new_rotation_x, -80, 90)
 	# Rotate camera up/forward and down/backward
 	camera_mount.rotation_degrees.x = new_rotation_x
-	
+
 	# Update the player (visuals+camera) opposite the horizontal mouse motion
 	rotate_y(deg_to_rad(-event.relative.x * look_sensitivity_mouse))
 	# Check if the player is in "third person" perspective
@@ -531,6 +483,7 @@ func update_velocity() -> void:
 				# Update [virtual] horizontal velocity
 				virtual_velocity.x = direction.x * speed_current
 
+			# The x-axis movement not locked
 			else:
 
 				# Update horizontal velocity
@@ -542,6 +495,7 @@ func update_velocity() -> void:
 				# Update vertical velocity
 				virtual_velocity.z = direction.z * speed_current
 
+			# The y-axis movement not locked
 			else:
 
 				# Update vertical velocity
@@ -550,11 +504,30 @@ func update_velocity() -> void:
 	# No movement detected
 	else:
 
-		# Update horizontal velocity
-		velocity.x = move_toward(velocity.x, 0, speed_current)
+		# Check if the player is skateboarding and grounded
+		if is_skateboarding and is_grounded:
 
-		# Update vertical velocity
-		velocity.z = move_toward(velocity.z, 0, speed_current)
+			# Set the friction to the skateboarding friction
+			var friction_current = friction_skateboarding
 
-		# Update [virtual] velocity
-		virtual_velocity = Vector3.ZERO
+			# [crouch] action _pressed_
+			if is_crouching:
+
+				# Slow down the player, more than usual
+				friction_current = friction_current * 10
+
+			# Apply gradual deceleration when skating
+			velocity.x = move_toward(velocity.x, 0, speed_current * friction_current)
+			velocity.z = move_toward(velocity.z, 0, speed_current * friction_current)
+
+		# The player is not skateboarding (on the ground)
+		else:
+
+			# Update horizontal velocity
+			velocity.x = move_toward(velocity.x, 0, speed_current)
+
+			# Update vertical velocity
+			velocity.z = move_toward(velocity.z, 0, speed_current)
+
+			# Update [virtual] velocity
+			virtual_velocity = Vector3.ZERO

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://spkln31swv4n"]
 
 [ext_resource type="PackedScene" uid="uid://cmvyr4ddovj2c" path="res://scenes/minecraft/nether_portal.tscn" id="1_ck0y7"]
-[ext_resource type="Script" path="res://scenes/minecraft/main.gd" id="1_fsqa7"]
+[ext_resource type="Script" uid="uid://cmuegth4kvikw" path="res://scenes/minecraft/main.gd" id="1_fsqa7"]
 [ext_resource type="AudioStream" uid="uid://mf2q04b80yvi" path="res://assets/minecraft/sounds/1_8_minecraft.mp3" id="2_g2f4g"]
 [ext_resource type="PackedScene" uid="uid://dh4x2u6bg8wgx" path="res://scenes/minecraft/sky_block.tscn" id="2_vvsy2"]
 [ext_resource type="PackedScene" uid="uid://bttq5d7qxdnen" path="res://scenes/minecraft/plains_small_house_6.tscn" id="3_3dvem"]

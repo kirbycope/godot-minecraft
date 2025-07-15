@@ -14,3 +14,6 @@ func _ready() -> void:
 
 	# Put the player in first-person perspective
 	$Player.camera.switch_to_first_person()
+
+	# Disable climbing
+	player.enable_climbing = false
